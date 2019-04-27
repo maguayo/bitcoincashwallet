@@ -7,6 +7,8 @@ import {
     TouchableOpacity,
     SafeAreaView,
 } from 'react-native';
+import { StackActions, NavigationActions } from 'react-navigation'
+
 
 export default class CreateWalletWarningScreen extends React.Component {
 
@@ -20,7 +22,7 @@ export default class CreateWalletWarningScreen extends React.Component {
     goSkipCreateWallet = () => {
         const resetAction = StackActions.reset({
             index: 0,
-            actions: [NavigationActions.navigate({ routeName: 'Main' })],
+            actions: [NavigationActions.navigate({ routeName: 'Home' })],
         });
         this.props.navigation.dispatch(resetAction);
     }
