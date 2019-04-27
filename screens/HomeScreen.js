@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {title: 'Home'};
@@ -7,7 +7,9 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text>Home</Text>
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <Text>Home Screen</Text>
+        </View>
       </ScrollView>
     );
   }
