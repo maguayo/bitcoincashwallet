@@ -1,4 +1,4 @@
-package com.rnbitcoinjs;
+package com.bitcoincash;
 
 import android.app.Application;
 
