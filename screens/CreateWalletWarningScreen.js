@@ -6,6 +6,7 @@ import {
     View,
     TouchableOpacity,
     SafeAreaView,
+    Image,
 } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'
 
@@ -32,10 +33,17 @@ export default class CreateWalletWarningScreen extends React.Component {
             <SafeAreaView style={styles.container}>
                 <ScrollView>
                     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                        <Text>Warning</Text>
-                        <TouchableOpacity>
-                            <Text onPress={() => this.goCreateWallet()}>Register</Text>
-                        </TouchableOpacity>
+                        <Text style={styles.warningTop}>Are you alone?</Text>
+                        <Image
+                            source={require('../assets/flaticons/png/001-complain.png')}
+                            style={styles.warningImage}
+                        />
+                        <Text style={styles.warningBottom}>Make sure nobody see your recovery seed. Anyone with this phrase can steal your Bitcoins.</Text>
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity style={styles.button}>
+                                <Text style={styles.buttonText} onPress={() => this.goCreateWallet()}>Let's go!</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </ScrollView>
             </SafeAreaView>
@@ -44,9 +52,41 @@ export default class CreateWalletWarningScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
+    container: {
+        flex: 1,
+        paddingTop: 15,
+        backgroundColor: '#242424',
+    },
+    warningImage: {
+        width: "50%",
+        resizeMode: 'contain'
+    },
+    warningTop: {
+        fontSize: 20,
+        lineHeight: 30,
+        color: "#fff",
+        marginTop: 20,
+    },
+    warningBottom: {
+        color: "#fff",
+        fontSize: 20,
+        lineHeight: 30,
+        margin: 25,
+        textAlign: "center"
+    },
+    button: {
+        backgroundColor: "#5ccb79",
+        paddingTop: 15,
+        paddingBottom: 15,
+        paddingLeft: 35,
+        paddingRight: 35,
+    },
+    buttonContainer: {
+        margin: 25,
+    },
+    buttonText: {
+        color: "#fff",
+        fontSize: 17,
+        textAlign: "center"
+    }
 });
