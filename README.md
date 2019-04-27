@@ -21,4 +21,4 @@ Make sure you have installed "process".
 npm install process
 ```
 
-Sometimes the library `bip39` returns an error related to rng. In this case install the lirbary from `github.com://maguayo/bip39`
+Sometimes the library `bip39` returns an error related to rng. In this case install the lirbary from `https://github.com/maguayo/bip39`
