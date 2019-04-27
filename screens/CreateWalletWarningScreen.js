@@ -40,9 +40,14 @@ export default class CreateWalletWarningScreen extends React.Component {
                         />
                         <Text style={styles.warningBottom}>Make sure nobody see your recovery seed. Anyone with this phrase can steal your Bitcoins.</Text>
                         <View style={styles.buttonContainer}>
-                            <TouchableOpacity style={styles.button}>
-                                <Text style={styles.buttonText} onPress={() => this.goCreateWallet()}>Let's go!</Text>
-                            </TouchableOpacity>
+                            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                <TouchableOpacity style={styles.buttonDanger}>
+                                    <Text style={styles.buttonText} onPress={() => this.goSkipCreateWallet()}>Cancel</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={styles.button}>
+                                    <Text style={styles.buttonText} onPress={() => this.goCreateWallet()}>Let's go!</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
                 </ScrollView>
@@ -80,9 +85,22 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingLeft: 35,
         paddingRight: 35,
+        marginLeft: 7,
+        marginRight: 7,
+    },
+    buttonDanger: {
+        backgroundColor: "#f44336",
+        paddingTop: 15,
+        paddingBottom: 15,
+        paddingLeft: 35,
+        paddingRight: 35,
+        marginLeft: 7,
+        marginRight: 7,
     },
     buttonContainer: {
         margin: 25,
+        flexDirection:'column',
+        justifyContent: 'flex-start'
     },
     buttonText: {
         color: "#fff",
