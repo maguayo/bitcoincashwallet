@@ -22,7 +22,7 @@ export default class CreateWalletScreen extends React.Component {
     goHome = () => {
         const resetAction = StackActions.reset({
             index: 0,
-            actions: [NavigationActions.navigate({ routeName: 'Home' })],
+            actions: [NavigationActions.navigate({ routeName: 'Main' })],
         });
         this.props.navigation.dispatch(resetAction);
     }

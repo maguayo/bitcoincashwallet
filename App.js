@@ -9,14 +9,14 @@ import InitWalletScreen from './screens/InitWalletScreen'
 import BottomAppNavigator from './navigation/AppNavigator';
 
 const AppNavigator = createStackNavigator({
+  InitWalletScreen: {
+    screen: InitWalletScreen
+  },
   Main: {
     screen: BottomAppNavigator
   },
   Home: {
     screen: HomeScreen
-  },
-  InitWalletScreen: {
-    screen: InitWalletScreen
   },
   CreateWalletWarningScreen: {
     screen: CreateWalletWarningScreen
