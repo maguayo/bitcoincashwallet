@@ -41,7 +41,13 @@ class TransactionsList extends Component {
             created: '8 months ago',
             number: 0.2279010110,
             sent: true
-         }
+         },
+         {
+            id: 6,
+            created: '8 months ago',
+            number: 0.0171901011,
+            sent: true
+         },
       ]
    }
    alertItemName = (item) => {
@@ -52,7 +58,7 @@ class TransactionsList extends Component {
       if(sent){
          return <Icon name="reply" style={styles.icon} size={15} color="#e57373" />
       }else{
-         return <Icon name="share" style={styles.icon} size={15} color="#81c784" />
+         return <Icon name="share" style={styles.icon} size={15} color="#84d12e" />
       }
    }
 
@@ -66,8 +72,6 @@ class TransactionsList extends Component {
          backgroundColor: "#000",
          alignItems: 'center',
          backgroundColor: "#fff",
-         borderBottomColor: '#efefef',
-         borderBottomWidth: 1,
       }
 
       return style
@@ -116,8 +120,4 @@ const styles = StyleSheet.create ({
       flex: 1,
       textAlign: 'right'
    },
-   transactionListContainer: {
-      borderTopColor: '#efefef',
-      borderTopWidth: 1,
-    },
 })
