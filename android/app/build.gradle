@@ -101,6 +101,7 @@ android {
         applicationId "com.bitcoincash"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        missingDimensionStrategy 'react-native-camera', 'general'
         versionCode 1
         versionName "1.0"
     }
@@ -134,6 +135,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-camera')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-sensitive-info')
     implementation project(':react-native-gesture-handler')
