@@ -42,7 +42,7 @@ export default class ReceiveScreen extends React.Component {
                 address = getAddress(root.derivePath("m/44/0/0/0/1"))
                 this.setState({"address": address});
             }).catch(err => {
-              _this.setState({"address": "Error loading address"});
+              _this.setState({"address": err.message});
               _this.setState({"seed": err.message})
             });
         });

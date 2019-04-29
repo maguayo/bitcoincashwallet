@@ -12,9 +12,10 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 
 export default class SendScreen extends Component {
   onSuccess(e) {
-    Linking
+    /*Linking
       .openURL(e.data)
-      .catch(err => console.error('An error occured', err));
+      .catch(err => console.error('An error occured', err));*/
+      alert(e.data)
   }
 
   render() {
